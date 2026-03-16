@@ -17,6 +17,11 @@ def insertNode(headNode, insertedNode):
         elif(searchNode.data<insertedNode.data and searchNode.nextLeft is None):
             searchNode.nextLeft = insertedNode
             break
+        elif(searchNode.data==insertedNode.data):
+            if(searchNode.nextRight is not None):
+                searchNode = searchNode.nextRight
+            
+
         
 def traverseAndPrint(head):
   currentNode = head
